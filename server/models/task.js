@@ -8,7 +8,8 @@ var schema = new mongoose.Schema({
 	description: { type: String },
 	created: { type: Number, default: Date.now() },
 	// Relations
-	boardId: { type: ObjectId, ref: models.board.name, required: true }
+	boardId: { type: ObjectId, ref: models.board.name, required: true },
+    listId: { type: ObjectId, ref: models.list.name, required: true }
 });
 
-module.exports = mongoose.model(models.list.name, schema);
+module.exports = mongoose.model(models.task.name, schema);
