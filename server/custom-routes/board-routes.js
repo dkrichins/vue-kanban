@@ -45,8 +45,7 @@ export default {
             //     .catch(next)
 
             Boards.findById(req.params.boardId)
-                .then(board => {
-                    console.log('here?')
+                .then(board => {                                       
                     Lists.find({ boardId: req.params.boardId })
                         .then(lists => {
                             board.lists = lists
