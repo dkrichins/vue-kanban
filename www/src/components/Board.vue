@@ -13,7 +13,7 @@ export default {
   computed:{
     board(){
       return this.$root.$data.store.state.activeBoard
-    }
+    } 
   }
 }
 </script>
