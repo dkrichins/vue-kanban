@@ -61,6 +61,8 @@ export default {
       auth.post('login', user)
         .then(res => {
           console.log(res)
+          state.user = res.data.data
+          router.push('/boards')
         })
         .catch(handleError)
     },
@@ -72,7 +74,7 @@ export default {
           return handleError(res.data.error)
         }
         //LETS REDIRECT THE PAGE
-        state.user = res.data
+        state.user = res.data.data
         router.push('/boards')
       })
       .catch(handleError)
