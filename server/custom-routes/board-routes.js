@@ -34,6 +34,71 @@ let Comments = require('../models/comment')
 
 
 export default {
+<<<<<<< HEAD
+    getListsByBoardId: {
+        path: '/boards/:boardId/lists',
+        reqType: 'get',
+        method(req, res, next) {
+            let action = 'Return board and all Lists with that Board Id'
+
+            // LoadEntityWithRelationship('Boards', 'Lists', req.params.boardId, action)
+            //     .then(res.send)
+            //     .catch(next)
+
+            Boards.findById(req.params.boardId)
+                .then(board => {                                       
+                    Lists.find({ boardId: req.params.boardId })
+                        .then(lists => {
+                            board.lists = lists
+                            res.send(handleResponse(action, board))
+                        }).catch(error => {
+                            return next(handleResponse(action, null, error))
+                        })
+                }).catch(error => {
+                    return next(handleResponse(action, null, error))
+                })
+        }
+    },
+    getTasksOnLists: {
+        path: '/boards/:boardId/lists/:listId/tasks',
+        reqType: 'get',
+        method(req, res, next) {
+            let action = 'Return list and all Tasks with that List Id'
+            console.log('req', req.params)
+            // LoadEntityWithRelationship('Lists', 'Tasks', req.params.listId, action)
+            //     .then(res.send)
+            //     .catch(next)
+            Lists.findById(req.params.listId)
+                .then(list => {
+                    //console.log('here?')
+                    Tasks.find({ listId: req.params.listId })
+                        .then(tasks => {
+                            list.tasks = tasks
+                            res.send(handleResponse(action, list))
+                        }).catch(error => {
+                            return next(handleResponse(action, null, error))
+                        })
+                }).catch(error => {
+                    return next(handleResponse(action, null, error))
+                })
+        }
+    },
+    getCommentsByTask: {
+        path: '/boards/:boardId/lists/:listId/tasks/:taskId/comments',
+        reqType: 'get',
+        method(req, res, next) {
+            let action = 'Return comments associated with a Task'
+            Tasks.findById(req.params.taskId)
+                .then(task => {
+                    Comments.find({ taskId: req.params.taskId })
+                        .then(comments => {
+                            task.comments = comments
+                            res.send(handleResponse(action, task))
+                        }).catch(error => {
+                            return next(handleResponse(action, null, error))
+                        })
+                }).catch(error => {
+=======
   getListsByBoardId: {
     path: '/boards/:boardId/lists',
     reqType: 'get',
@@ -113,6 +178,7 @@ export default {
                   .then(comments => {
                     task.comments = comments
                   }).catch(error => {
+>>>>>>> b0bf1ba25ddb9cf992301dd4b12cc8a5c20c786b
                     return next(handleResponse(action, null, error))
                   })
               })).then(() => {

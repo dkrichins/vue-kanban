@@ -21,6 +21,8 @@ export default {
       Boards.find({collaborators: { $in: req.session.uid}})
         .then(boards => {
           res.send(handleResponse(action, boards))
+          //handleResponse turns boards and action into an object with 
+          //props action and data
         }).catch(error => {
           return next(handleResponse(action, null, error))
         })
