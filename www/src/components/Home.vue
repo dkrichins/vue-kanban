@@ -33,7 +33,7 @@
   display: inline-block;
   margin: 0 3px;
 }
-i{
+li{
   color: white;
 }
 .logo{
