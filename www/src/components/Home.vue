@@ -8,7 +8,7 @@
               <router-link class="btn" to="/register">Register</router-link>
             </li>
             <li class="">
-              <router-link class="btn" to="/login">Log In</router-link>
+              <router-link class="btn" to="/login">Login</router-link>
             </li>
           </ul>
         </div>
