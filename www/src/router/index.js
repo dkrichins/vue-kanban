@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Boards from 'components/Boards'
 import Board from 'components/Board'
-// import Homepage from 'components/Homepage'
+import Home from 'components/Home'
 import Login from 'components/Login'
 import Register from 'components/Register'
 
@@ -11,8 +11,8 @@ Vue.use(Router)
 export default new Router({
   routes: [{
       path: '/',
-      name: 'Boards',
-      component: Boards
+      name: 'Home',
+      component: Home
     },{
       path: '/boards/:id',
       name: 'Board',
