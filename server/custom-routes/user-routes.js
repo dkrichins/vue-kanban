@@ -11,7 +11,7 @@ export default {
           res.send(handleResponse(action, boards))
         }).catch(error => {
           return next(handleResponse(action, null, error))
-        })
+        }) 
     }
   },
   sharedBoards: {

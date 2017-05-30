@@ -1,6 +1,7 @@
 <template>
   <div> 
     Active Board: {{board}}
+    <!--<list-component v-for="list in lists" :list = list></list-component>-->
   </div>
 </template>
 
