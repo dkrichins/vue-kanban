@@ -1,11 +1,14 @@
 <template>
-  <div> 
-    Active Board: {{board}}
-    <!--<list-component v-for="list in lists" :list = list></list-component>-->
+  <div class="board"> 
+    
+    Board name: {{board.name}}
+    Board description: {{board.description}}  
+    <!--<list v-for="list in lists" :listProp = list></list>-->
   </div>
 </template>
 
 <script>
+import List from "./List"
 export default {
   name: 'board',
   mounted(){
@@ -15,10 +18,13 @@ export default {
     board(){
       return this.$root.$data.store.state.activeBoard
     } 
+  },
+  components: {
+    List
   }
 }
-</script>
+</script> 
 
-<style scoped>
+<style scoped >
 
 </style>

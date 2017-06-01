@@ -55,7 +55,7 @@ export default {
         })
     }
   },
-  getTasksOnLists: {
+  getTasksByListId: {
     path: '/boards/:boardId/lists/:listId/tasks',
     reqType: 'get',
     method(req, res, next) {
@@ -79,7 +79,7 @@ export default {
         })
     }
   },
-  getCommentsByTask: {
+  getCommentsByTaskId: {
     path: '/boards/:boardId/lists/:listId/tasks/:taskId/comments',
     reqType: 'get',
     method(req, res, next) {
@@ -121,12 +121,6 @@ export default {
     }
   }
 }
-
-
-
-
-
-
 
 function handleResponse(action, data, error) {
   var response = {

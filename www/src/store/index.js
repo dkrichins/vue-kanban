@@ -16,6 +16,7 @@ let auth = axios.create({
 let state = {
   boards: [{}],
   activeBoard: {},
+  activeTasks: {},
   error: {},
   user: {}
 }

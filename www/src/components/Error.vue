@@ -1,5 +1,5 @@
 <template>
-  <div> 
+  <div class="error"> 
     Error: {{error}}
   </div>
 </template>

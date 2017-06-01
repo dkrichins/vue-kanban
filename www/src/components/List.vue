@@ -1,7 +1,7 @@
 <template>
     <div class="list">
-
-
+        <!--<task v-for="task in tasks" :taskProp = task></task>-->
+        hello list
     </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
     data(){
 
     },
-    
+    props: ['listProp'],
     computed:{},
     methods:{},
     components:{}
@@ -20,6 +20,6 @@ export default {
 </script>
 
 
-<style scoped lang="sass">
+<style scoped>
 
 </style>

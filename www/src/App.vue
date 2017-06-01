@@ -24,4 +24,10 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+#app {
+  background: url("https://static.pexels.com/photos/348323/pexels-photo-348323.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  height: 900px; 
+}
 </style>
