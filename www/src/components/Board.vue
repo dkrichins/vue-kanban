@@ -23,8 +23,8 @@ export default {
     List
   }
 }
-</script>
+</script> 
 
-<style scoped>
+<style scoped >
 
 </style>
