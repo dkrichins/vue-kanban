@@ -18,6 +18,10 @@ export default new Router({
       name: 'Board',
       component: Board
     },{
+      path: '/boards',
+      name: 'Boards',
+      component: Boards
+    },{
       path: '/login',
       name: 'Login',
       component: Login
