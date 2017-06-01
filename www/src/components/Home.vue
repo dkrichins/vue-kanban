@@ -1,21 +1,18 @@
 <template>
-
-  <div class="navbar">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <ul class="list-inline">
-            <li class="">
-              <router-link class="btn" to="/register"><button type="button" class="btn">Register</button></router-link>
-            </li>
-            <li class="">
-<<<<<<< HEAD
-              <router-link class="btn" to="/login">Login</router-link>
-=======
-              <router-link class="btn" to="/login"><button type="button" class="btn">Login</button></router-link>
->>>>>>> b4846a51d8a254ed2f9ddb05012ca86fa6b99555
-            </li>
-          </ul>
+  <div class="home">
+    <div class="navbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <ul class="list-inline">
+              <li class="">
+                <router-link class="btn" to="/register"><button type="button" class="btn">Register</button></router-link>
+              </li>
+              <li class="">
+                <router-link class="btn" to="/login"><button type="button" class="btn">Login</button></router-link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -25,45 +22,54 @@
 
 <script>
   export default {
-    name: 'homepage',
+    name: 'home',
     computed: {},
     methods: {},
     components: {}
   }
+
 </script>
 
 
 <style scoped>
-.list-inline li{
-  display: inline-block;
-  margin: 0 3px;
-}
-li{
-  color: white;
-}
-.logo{
-  color: white;
-  font-size: 40px;
-}
-h2{
-  margin-top: 100px;
-  color: white;
-  font-weight: 900;
-  text-align: left;
-}
-h5{
-  margin-top: 20px;
-  color: white;
-  text-align: left;
-}
-p{
-  text-align: left;
-  color: white;
-}
-button{
-  margin-left: 0
-}
-img{
-  margin-top: -70px;
-}
+  .list-inline li {
+    display: inline-block;
+    margin: 0 3px;
+  }
+
+  li {
+    color: white;
+  }
+
+  .logo {
+    color: white;
+    font-size: 40px;
+  }
+
+  h2 {
+    margin-top: 100px;
+    color: white;
+    font-weight: 900;
+    text-align: left;
+  }
+
+  h5 {
+    margin-top: 20px;
+    color: blue;
+    text-align: left;
+  }
+
+  p {
+    text-align: left;
+    color: black;
+  }
+
+  button {
+    margin-left: 0
+  }
+
+  img {
+    margin-top: -70px;
+  }
+  
 </style>
