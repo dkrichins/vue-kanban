@@ -35,11 +35,14 @@
       <div class="row">
         <div class="col-sm-12">
           <ul class="list-inline">
-            <li class="">
+            <li>
               <router-link class="btn" to="/register"><button type="button" class="btn">Register</button></router-link>
             </li>
+            <li>
               <router-link class="btn" to="/login"><button type="button" class="btn">Login</button></router-link>
+            </li>
           </ul>
+
 
         </div>
       </div>
@@ -91,19 +94,18 @@
   }
 
   button {
-    margin-left: 0
+    margin-left: 0;
   }
 
   img {
     margin-top: -70px;
   }
-<<<<<<< HEAD
-=======
-  .first{
+
+  .first {
     background: silver;
     opacity: .6;
 
   }
->>>>>>> ad3d0c8a4961cfc89fb4a983af2c7682b7980ebd
+
   
 </style>
