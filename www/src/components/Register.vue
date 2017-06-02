@@ -36,7 +36,7 @@
     computed: {},
     methods: {
       register() {
-        this.$store.dispatch.register({
+        this.$store.dispatch('register', {
           name: this.name,
           email: this.email,
           password: this.password

@@ -1,21 +1,25 @@
 <template>
-    <div class="comment">
-
-
+    <div class="well well-sm">
+        <div class="comment">
+            {{commentData}}
+        </div>
     </div>
 </template>
 
 
 <script>
-export default {
-    name: 'comment',
-    data(){
+    export default {
+        name: 'comment',
+        //props recieves data
+        props: ['comment-data'],
+        methods: {
 
-    },
-    computed:{},
-    methods:{},
-    components:{}
-}
+        },
+        mounted() {
+        },
+
+    }
+
 </script>
 
 

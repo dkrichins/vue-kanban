@@ -20,13 +20,13 @@ export default {
   },
   methods:{
     createBoard(){
-      this.$store.dispatch.createBoard({
+      this.$store.dispatch('createBoard', {
         name: 'Testing board creation',
         description: 'blarg'
       })
     },
     removeBoard(board){
-      this.$store.dispatch.removeBoard(board)
+      this.$store.dispatch('removeBoard', board)
     }
   }
 }
