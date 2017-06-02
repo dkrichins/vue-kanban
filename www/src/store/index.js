@@ -38,6 +38,7 @@ export default new Vuex.Store({
   // ALL DATA LIVES IN THE STATE
   state,
   //Mutations are the only thing alowed to update the store directly through store.propName
+
   mutations: {
     setBoards(state, boards) {
       state.boards = boards
@@ -64,13 +65,8 @@ export default new Vuex.Store({
       state.Auth = Auth
     },
 
-
-
-
-
-
-
   },
+
   // ACTIONS ARE RESPONSIBLE FOR MANAGING ALL ASYNC REQUESTS
   // Dispatch fires actions, commit fires mutations
   actions: {
@@ -81,13 +77,18 @@ export default new Vuex.Store({
         })
         .catch(handleError)
     },
-    getBoard({ commit, dispatch }, id) {
+
+
+    getBoard({commit, dispatch}, id) {
+
       api('boards/' + id)
         .then(res => {
           commit('setActiveBoard', res.data.data)
         })
         .catch(handleError)
     },
+
+
 
     createBoard({commit, dispatch}, board) {
       api.post('boards/', board)
@@ -98,7 +99,7 @@ export default new Vuex.Store({
     },
 
 
-    removeBoard({ commit, dispatch }, board) {
+    removeBoard({commit, dispatch }, board) {
       api.delete('boards/' + board._id)
         .then(res => {
           dispatch('getBoards')
@@ -106,7 +107,7 @@ export default new Vuex.Store({
         .catch(handleError)
     },
 
-    getLists({ commit, dispatch }, id) {
+    getLists({commit, dispatch }, id) {
       api('/boards/' + id + '/lists/')
         .then(res => {
           commit('setActiveLists', res.data.data)
