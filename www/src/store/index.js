@@ -28,26 +28,33 @@ let handleError = (err) => {
 export default {
   // ALL DATA LIVES IN THE STATE
   state,
+  //Mutations are the only thing alowed to update the store directly through store.propName
+  mutations: {
+    setBoards(state, boards){
+      state.boards = boards
+    }
+  },
   // ACTIONS ARE RESPONSIBLE FOR MANAGING ALL ASYNC REQUESTS
+  // Dispatch fires actions, commit fires mutations
   actions: {
-    getBoards() {
+    getBoards({commit, dispatch}) {
       api('userboards')
         .then(res => {
-          state.boards = res.data.data
+          commit('setBoards', res.data.data)
         })
         .catch(handleError)
     },
-    getBoard(id) {
+    getBoard({commit, dispatch}, id) {
       api('boards/' + id)
         .then(res => {
           state.activeBoard = res.data.data
         })
         .catch(handleError)
     },
-    createBoard(board) {
+    createBoard({commit, dispatch}, board) {
       api.post('boards/', board)
         .then(res => {
-          this.getBoards()
+          dispatch('getBoards')
         })
         .catch(handleError)
     },

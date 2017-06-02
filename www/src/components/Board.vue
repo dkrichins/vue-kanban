@@ -12,11 +12,11 @@ import List from "./List"
 export default {
   name: 'board',
   mounted(){
-    this.$root.$data.store.actions.getBoard(this.$route.params.id)
+    this.$store.dispatch.getBoard(this.$route.params.id)
   },
   computed:{
     board(){
-      return this.$root.$data.store.state.activeBoard
+      return this.$store.state.activeBoard
     } 
   },
   components: {
