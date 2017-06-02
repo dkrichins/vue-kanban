@@ -63,7 +63,7 @@ export default new Vuex.Store({
     },
     setAuth(state, Auth){
       state.Auth = Auth
-    },
+    }
 
   },
 
