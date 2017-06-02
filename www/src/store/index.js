@@ -37,15 +37,7 @@ let handleError = (state, err) => {
 export default new Vuex.Store({
   // ALL DATA LIVES IN THE STATE
   state,
-<<<<<<< HEAD
   //Mutations are the only thing alowed to update the store directly through store.propName
-  mutations: {
-    setBoards(state, boards){
-      state.boards = boards
-    }
-  },
-=======
-
   mutations: {
     setBoards(state, boards) {
       state.boards = boards
@@ -79,40 +71,25 @@ export default new Vuex.Store({
 
 
   },
-
->>>>>>> 9e0eca104d05dfae833b15f4d7d9a46f617905ba
   // ACTIONS ARE RESPONSIBLE FOR MANAGING ALL ASYNC REQUESTS
   // Dispatch fires actions, commit fires mutations
   actions: {
-<<<<<<< HEAD
     getBoards({commit, dispatch}) {
-=======
-    getBoards({ commit, dispatch }) {
->>>>>>> 9e0eca104d05dfae833b15f4d7d9a46f617905ba
       api('userboards')
         .then(res => {
           commit('setBoards', res.data.data)
         })
         .catch(handleError)
     },
-<<<<<<< HEAD
-    getBoard({commit, dispatch}, id) {
-=======
     getBoard({ commit, dispatch }, id) {
->>>>>>> 9e0eca104d05dfae833b15f4d7d9a46f617905ba
       api('boards/' + id)
         .then(res => {
           commit('setActiveBoard', res.data.data)
         })
         .catch(handleError)
     },
-<<<<<<< HEAD
+
     createBoard({commit, dispatch}, board) {
-=======
-
-
-    createBoard({ commit, dispatch }, board) {
->>>>>>> 9e0eca104d05dfae833b15f4d7d9a46f617905ba
       api.post('boards/', board)
         .then(res => {
           dispatch('getBoards')
@@ -232,4 +209,4 @@ export default new Vuex.Store({
       state.error = {}
     }
   }
-}
+})
