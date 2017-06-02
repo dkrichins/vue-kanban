@@ -63,13 +63,7 @@ export default new Vuex.Store({
     },
     setAuth(state, Auth){
       state.Auth = Auth
-    },
-
-
-
-
-
-
+    }
 
   },
 
@@ -83,13 +77,19 @@ export default new Vuex.Store({
         })
         .catch(handleError)
     },
+
+
     getBoard({commit, dispatch}, id) {
+
       api('boards/' + id)
         .then(res => {
           commit('setActiveBoard', res.data.data)
         })
         .catch(handleError)
     },
+
+
+
     createBoard({commit, dispatch}, board) {
       api.post('boards/', board)
         .then(res => {

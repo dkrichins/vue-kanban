@@ -1,53 +1,42 @@
 <template>
+
   <div class="home">
-   <!-- <div class="navbar">
+    <div class="navbar">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12">
-            <ul class="list-inline">
-              <li class="">
-                <router-link class="btn" to="/register"><button type="button" class="btn">Register</button></router-link>
-              </li>
-              <li class="">
-                <router-link class="btn" to="/login"><button type="button" class="btn">Login</button></router-link>
-              </li>
-            </ul>
-          </div>-->
-          <div class="col-xs-12 first">
-            <h1>DustySue Kanban</h1>
-          </div>
-        <!--  <div class="col-xs-1 col-xs-offset-5">
+          <div class="col-xs-12 first">  
+             <h1>DustySue Kanban</h1>             
+          </div>         
+          <div class="col-xs-1 col-xs-offset-5">
             <router-link class="btn" to="/register"><button type="button" class="btn">Register</button></router-link>
           </div>
           <div class="col-xs-1">
             <router-link class="btn" to="/login"><button type="button" class="btn">Login</button></router-link>
-          </div>-->
+          </div>         
 
 
-          <div class="navbar">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-12">
-                  <ul class="list-inline">
-                    <li>
-                      <router-link class="btn" to="/register"><button type="button" class="btn">Register</button></router-link>
-                    </li>
-                    <li>
-                      <router-link class="btn" to="/login"><button type="button" class="btn">Login</button></router-link>
-                    </li>
-                  </ul>
+  <div class="navbar">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="list-inline">
+            <li class="">
+              <router-link class="btn" to="/register"><button type="button" class="btn">Register</button></router-link>
+            </li>
+            <li class="">
 
-                </div>
-              </div>
-            </div>
-          </div>
+              <router-link class="btn" to="/login">Login</router-link>
+
+              <router-link class="btn" to="/login"><button type="button" class="btn">Login</button></router-link>
+
+            </li>
+          </ul>
+
         </div>
       </div>
     </div>
   </div>
 </template>
-
-
 <script>
   export default {
     name: 'home',
@@ -83,25 +72,26 @@
 
   h5 {
     margin-top: 20px;
-    color: blue;
+    color: white;
     text-align: left;
   }
 
   p {
     text-align: left;
-    color: black;
+    color: white;
   }
 
   button {
-    margin-left: 0;
+    margin-left: 0
   }
 
   img {
     margin-top: -70px;
   }
-
-  .first {
+  .first{
     background: silver;
     opacity: .6;
+
   }
+  
 </style>

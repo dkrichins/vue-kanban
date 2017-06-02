@@ -9,7 +9,7 @@ export default {
   name: 'error',
   computed:{
     error(){
-      return this.$root.$data.store.state.error
+      return this.$store.state.error
     }
   }
 }
