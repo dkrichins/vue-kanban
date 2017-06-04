@@ -1,13 +1,19 @@
 <template>
-    <div class="task">
-
-
-    </div>
+  <div class="task">
+    <div class="container">
+      <div class="row" v-for="comment in comments">
+        <div class="col-xs-4">
+          <div class="well">
+            <comment :commentProp="comment"></comment>            
+          </div>
+        </div>
+      </div>
+    </div>      
+  </div>
 </template>
 
-
 <script>
-import Comment from './comment'
+import Comment from './Comment'
 export default {
   name: 'task',
 
@@ -39,6 +45,6 @@ export default {
 </script>
 
 
-<style scoped lang="sass">
+<style scoped>
 
 </style>
