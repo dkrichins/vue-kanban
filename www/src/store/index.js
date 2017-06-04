@@ -115,7 +115,7 @@ export default new Vuex.Store({
         .catch(handleError)
     },
 
-    createLists({ commit, dispatch }, list) {
+    createList({ commit, dispatch }, list) {
       api.post('lists/', list)
         .then(res => {
           dispatch('getLists')
@@ -123,7 +123,7 @@ export default new Vuex.Store({
         .catch(handleError)
     },
 
-    removeLists({ commit, dispatch }, list) {
+    removeList({ commit, dispatch }, list) {
       api.delete('lists/' + list._id)
         .then(res => {
           dispatch('getLists')
